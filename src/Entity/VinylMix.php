@@ -32,6 +32,12 @@ class VinylMix
     #[ORM\Column]
     private ?int $votes = 0;
 
+    #[ORM\Column(length: 255)]
+    private ?string $Title = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $description = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -105,6 +111,18 @@ class VinylMix
     public function setVotes(int $votes): static
     {
         $this->votes = $votes;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(string $description): static
+    {
+        $this->description = $description;
 
         return $this;
     }
