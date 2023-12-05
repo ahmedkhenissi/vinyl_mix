@@ -33,7 +33,7 @@ class MixControlleur extends AbstractController
         ));
     }
 
-    #[Route('/mix/{id}', name: 'app_mix_show')]
+    #[Route('/mix/{slug}', name: 'app_mix_show')]
     public function show(VinylMix $mix): Response
     {
         return $this->render('mix/show.html.twig', [
