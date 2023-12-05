@@ -1,3 +1,5 @@
+# framework.yaml
+
 # see https://symfony.com/doc/current/reference/configuration/framework.html
 framework:
     secret: '%env(APP_SECRET)%'
@@ -18,8 +20,8 @@ framework:
     php_errors:
         log: true
 
-when@test:
-    framework:
-        test: true
-        session:
-            storage_factory_id: session.storage.factory.mock_file
+# other configuration options go here
+
+# parameters section
+parameters:
+    debug: '%kernel.debug%'
