@@ -55,7 +55,7 @@ class MixControlleur extends AbstractController
         $this->addFlash('success', 'Vote counted!');
 
         return $this->redirectToRoute('app_mix_show', [
-            'id' => $mix->getId(),
+            'slug' => $mix->getSlug(),
         ]);
     }
 }
